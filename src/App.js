@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "./Components/Navbar";
+import Notes from "./Components/Notes";
 
 function App() {
   const [display, setDisplay] = useState("all");
@@ -9,8 +10,8 @@ function App() {
       <Navbar display={display} setDisplay={setDisplay} />
 
       {display === "all" ? (
-        <div className="text-blue-600 bg-slate-200 h-[calc(100vh-6rem)]">
-          Build in progress...
+        <div className="  h-[calc(100vh-6rem)]">
+          <Notes />
         </div>
       ) : (
         <div className="text-blue-600 bg-orange-300 h-[calc(100vh-6rem)]">

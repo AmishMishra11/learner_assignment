@@ -119,7 +119,7 @@ function Navbar({ display, setDisplay }) {
       <div
         ref={hamburgerMenuRef}
         style={{ width: hamburgerMenu ? "12rem" : "0" }}
-        className="fixed ease-in duration-300 top-0 h-screen overflow-hidden bg-[#34C1D7]"
+        className="fixed z-10 ease-in duration-300 top-0 h-screen overflow-hidden bg-[#34C1D7]"
       >
         <div
           className="pt-4 pl-4 cursor-pointer"
