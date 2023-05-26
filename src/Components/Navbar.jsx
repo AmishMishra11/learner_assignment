@@ -44,15 +44,15 @@ function Navbar({ display, setDisplay }) {
     };
   });
   return (
-    <div className="w-screen h-24 bg-[#fffafa]  flex items-center justify-between">
+    <div className="w-screen h-24 bg-[#fffafa] drop-shadow-md flex items-center justify-between ">
       <div className=" w-40 h-full flex flex-col justify-between ">
-        <div
-          className="p-4 cursor-pointer"
-          onClick={() => {
-            setHamburgerMenu(true);
-          }}
-        >
-          <RxHamburgerMenu className="text-lg stroke-[.8px]" />
+        <div className="p-4 ">
+          <RxHamburgerMenu
+            className="text-lg stroke-[.8px] cursor-pointer"
+            onClick={() => {
+              setHamburgerMenu(true);
+            }}
+          />
         </div>
 
         <div className="flex justify-between items-center p-2 pl-8 ">
@@ -75,15 +75,15 @@ function Navbar({ display, setDisplay }) {
 
       <div className="flex items-center justify-between pr-8">
         <div
-          className="p-8 cursor-pointer flex items-center justify-between w-[15rem] hover:text-[#34C1D7]"
+          className="p-8 cursor-pointer flex items-center justify-between sm:w-[15rem]  hover:text-[#34C1D7]"
           onClick={() => setInvite(true)}
         >
           <BsPersonAdd />
-          Invite Team Members
+          <span className="hidden sm:block">Invite Team Members</span>
         </div>
         <div className="relative">
           <div
-            className="h-16 w-16 bg-purple-500 flex items-center cursor-pointer justify-center rounded-full"
+            className=" h-14 w-14 lg:h-16 lg:w-16 bg-purple-500 flex items-center cursor-pointer justify-center rounded-full"
             onClick={() => setMenu((prev) => !prev)}
           >
             AM
@@ -119,7 +119,7 @@ function Navbar({ display, setDisplay }) {
       <div
         ref={hamburgerMenuRef}
         style={{ width: hamburgerMenu ? "12rem" : "0" }}
-        className="fixed z-10 ease-in duration-300 top-0 h-screen overflow-hidden bg-[#34C1D7]"
+        className="fixed z-10 ease-in duration-200 top-0 h-screen overflow-hidden bg-[#34C1D7]"
       >
         <div
           className="pt-4 pl-4 cursor-pointer"
