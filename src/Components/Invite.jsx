@@ -6,7 +6,7 @@ function Invite({ invite, onClose }) {
   }
   return (
     <div
-      className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-[rgba(0, 81, 112, 0.1)] backdrop-blur-[1px] z-10"
+      className="fixed top-0 left-0 right-0 bottom-[calc(6rem-100vh)] flex items-center justify-center bg-[rgba(0, 81, 112, 0.1)] backdrop-blur-[1px] z-50"
       onClick={() => onClose()}
     >
       <div
